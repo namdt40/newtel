@@ -1,0 +1,28 @@
+zuul:
+  routes:
+    authority:
+      url: http://localhost:8090
+    clinic:
+      url: http://localhost:8091
+    decision:
+      url: http://localhost:8092
+    emr:
+      url: http://localhost:8093
+    homecare:
+      url: http://localhost:8094
+    hospital:
+      url: http://localhost:8095
+
+ribbon:
+  eureka:
+    enabled: false
+server:
+  port: 8080
+
+spring:
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:8090/oauth/token
+      userAuthorizationUri: http://localhost:8090/oauth/authorize
+      clientId: my-trusted-client
+      clientSecret: secret

@@ -1,0 +1,8 @@
+<h3>List Services</h3>
+<div class="grid grid-pad">
+    <div *ngFor="let service of services" (click)="gotoDetail(service)" class="col-1-4">
+        <div class="module hero">
+            <h4>{{service.name}}</h4>
+        </div>
+    </div>
+</div>
