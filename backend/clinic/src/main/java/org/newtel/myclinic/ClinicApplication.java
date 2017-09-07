@@ -1,23 +1,24 @@
-package org.newtel.dataservice;
+package org.newtel.myclinic;
 
 import org.newtel.dataservice.models.Clinic;
 import org.newtel.dataservice.service.IClinicService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+@ComponentScan(basePackages = {"org.newtel"})
 @SpringBootApplication
 @RestController
-public class DataserviceApplication {
+@EnableAutoConfiguration
+public class ClinicApplication {
 
-	private  static Logger log = LoggerFactory.getLogger(DataserviceApplication.class);
 	public static void main(String[] args) {
-		SpringApplication.run(DataserviceApplication.class, args);
+		SpringApplication.run(ClinicApplication.class, args);
 	}
 
 	@Autowired
@@ -25,7 +26,8 @@ public class DataserviceApplication {
 
 	@RequestMapping(value = "/findall", method = RequestMethod.GET)
 	public Iterable<Clinic> findAll() {
-		log.debug("Vo day");
 		return this.clinicService.findAll();
 	}
+
+
 }

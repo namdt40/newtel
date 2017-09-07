@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var router_1 = require("@angular/router");
 var dashboard_component_1 = require("./components/dashboard/dashboard.component");
 var heroes_component_1 = require("./components/heroes/heroes.component");
+var clinic_detail_component_1 = require("./components/clinicDetail/clinic-detail.component");
 var service_detail_component_1 = require("./components/serviceDetail/service-detail.component");
 var appRoutes = [
     {
@@ -17,6 +18,10 @@ var appRoutes = [
     {
         path: 'detail/:id',
         component: service_detail_component_1.ServiceDetailComponent
+    },
+    {
+        path: 'clinic/:id',
+        component: clinic_detail_component_1.ClinicDetailComponent
     },
     {
         path: 'heroes',

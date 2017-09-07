@@ -86,6 +86,16 @@ gulp.task("libs", () => {
 });
 
 /**
+ * Copy all required libraries into build directory.
+ * */
+gulp.task("node_modules", () => {
+    return gulp.src([
+        'node_modules/*'
+    ], {cwd: "."})
+        .pipe(gulp.dest("build/node_modules"));
+});
+
+/**
  * Watch for changes in TypeScript, HTML and CSS files
  * */
 gulp.task('watch', function () {
@@ -132,5 +142,5 @@ gulp.task('start', function () {
  * */
 
 gulp.task('build', function (callback: any) {
-    runSequence('clean', 'build:server', 'build:client', 'resources', 'libs', callback);
+    runSequence('clean', 'build:server', 'build:client', 'resources', 'libs','node_modules', callback);
 });

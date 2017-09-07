@@ -16,6 +16,7 @@ var heroes_component_1 = require("./components/heroes/heroes.component");
 var dashboard_component_1 = require("./components/dashboard/dashboard.component");
 var hero_detail_component_1 = require("./components/heroDetail/hero-detail.component");
 var service_detail_component_1 = require("./components/serviceDetail/service-detail.component");
+var clinic_detail_component_1 = require("./components/clinicDetail/clinic-detail.component");
 var hero_service_1 = require("./services/hero.service");
 var service_service_1 = require("./services/service.service");
 var AppModule = (function () {
@@ -34,7 +35,8 @@ var AppModule = (function () {
                 heroes_component_1.HeroesComponent,
                 dashboard_component_1.DashboardComponent,
                 hero_detail_component_1.HeroDetailComponent,
-                service_detail_component_1.ServiceDetailComponent
+                service_detail_component_1.ServiceDetailComponent,
+                clinic_detail_component_1.ClinicDetailComponent
             ],
             providers: [
                 hero_service_1.HeroService,

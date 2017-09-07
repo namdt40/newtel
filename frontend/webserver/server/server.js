@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var serverConfig_1 = require("./serverConfig");
-var debug = require("debug");
 var http = require("http");
+var fs = require("fs");
 // import express = require('express');
 // import path = require('path');
 // var port: string = process.env.PORT || '3001';
@@ -25,6 +25,10 @@ var http = require("http");
 //     var port = server.address().port;
 //     console.log('This express app is listening on port:' + port);
 // });
+var optionhttps = {
+    key: fs.readFileSync('C:\\Users\\namdt\\key.pem'),
+    cert: fs.readFileSync('C:\\Users\\namdt\\cert.pem')
+};
 var httpPort = normalizePort(process.env.PORT || 3001);
 var app = serverConfig_1.ServerConfig.bootstrap().app;
 app.set("port", httpPort);
@@ -82,5 +86,5 @@ function onListening() {
     var bind = typeof addr === "string"
         ? "pipe " + addr
         : "port " + addr.port;
-    debug("Listening on " + bind);
+    console.log("Listening on " + bind);
 }

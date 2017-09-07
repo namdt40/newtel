@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>clinic</name>
-	<description>clinic</description>
+	<description>Clinic</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -35,7 +35,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.newtel</groupId>
 			<artifactId>dataservice</artifactId>

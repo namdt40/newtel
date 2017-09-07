@@ -27,8 +27,14 @@ var DashboardComponent = (function () {
             .then(function (services) { return _this.services = services; });
     };
     DashboardComponent.prototype.gotoDetail = function (service) {
-        var link = ['/detail', service.id];
-        this.router.navigate(link);
+        if (service.id != 2) {
+            var link = ['/detail', service.id];
+            this.router.navigate(link);
+        }
+        else {
+            var link = ['/clinic', service.id];
+            this.router.navigate(link);
+        }
     };
     DashboardComponent = __decorate([
         core_1.Component({

@@ -1,5 +1,6 @@
 import { ServerConfig } from './serverConfig';
 import http = require('http');
+import fs = require('fs');
 
 // import express = require('express');
 // import path = require('path');
@@ -25,6 +26,10 @@ import http = require('http');
 //     console.log('This express app is listening on port:' + port);
 // });
 
+var optionhttps = {
+    key: fs.readFileSync('C:\\Users\\namdt\\key.pem'),
+    cert: fs.readFileSync('C:\\Users\\namdt\\cert.pem')
+};
 var httpPort = normalizePort(process.env.PORT || 3001);
 var app = ServerConfig.bootstrap().app;
 app.set("port", httpPort);

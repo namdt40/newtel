@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent }   from './components/dashboard/dashboard.component';
 import { HeroesComponent }      from './components/heroes/heroes.component';
-import { HeroDetailComponent }  from './components/heroDetail/hero-detail.component';
+import { ClinicDetailComponent } from './components/clinicDetail/clinic-detail.component';
 import { ServiceDetailComponent } from './components/serviceDetail/service-detail.component';
 
 const appRoutes: Routes = [
@@ -18,6 +18,10 @@ const appRoutes: Routes = [
   {
     path: 'detail/:id',
     component: ServiceDetailComponent
+  },
+  {
+    path: 'clinic/:id',
+    component: ClinicDetailComponent
   },
   {
     path: 'heroes',

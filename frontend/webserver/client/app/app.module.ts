@@ -10,9 +10,10 @@ import { HeroesComponent }      from './components/heroes/heroes.component';
 import { DashboardComponent }   from './components/dashboard/dashboard.component';
 import { HeroDetailComponent }  from './components/heroDetail/hero-detail.component';
 import { ServiceDetailComponent } from './components/serviceDetail/service-detail.component';
+import { ClinicDetailComponent } from './components/clinicDetail/clinic-detail.component';
 
 import { HeroService }  from './services/hero.service';
-import {ServiceService} from './services/service.service';
+import { ServiceService } from './services/service.service';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import {ServiceService} from './services/service.service';
     HeroesComponent,
     DashboardComponent,
     HeroDetailComponent,
-      ServiceDetailComponent
+    ServiceDetailComponent,
+    ClinicDetailComponent
   ],
   providers: [
     HeroService,

@@ -28,7 +28,12 @@ export class DashboardComponent implements OnInit {
     }
 
     gotoDetail(service: Service) {
-        let link = ['/detail', service.id];
-        this.router.navigate(link);
+        if(service.id!= 2) {
+            let link = ['/detail', service.id];
+            this.router.navigate(link);
+        } else {
+            let link = ['/clinic', service.id];
+            this.router.navigate(link);
+        }
     }
 }

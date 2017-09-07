@@ -4,13 +4,14 @@ var IndexRoute = (function () {
     function IndexRoute() {
     }
     IndexRoute.create = function (route) {
-        route.get('/detail/:id', function (req, res, next) {
-            console.log(req.params);
-            var data = {
-                val: 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkk'
-            };
-            res.send(data);
-        });
+        // route.get('/service',(req: Request, res: Response, next: NextFunction)=> {
+        //     console.log('kkkkkkkkkkkkkkkkkkkkkk');
+        //     console.log(req.params);
+        //     let data = {
+        //         val: 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkk'
+        //     };
+        //     res.send(data);
+        // })
     };
     return IndexRoute;
 }());

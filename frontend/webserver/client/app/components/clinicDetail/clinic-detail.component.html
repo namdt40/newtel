@@ -1,0 +1,26 @@
+<div>
+    <div>
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="name"/>
+    </div>
+    <div>
+        <label>Description:</label>
+        <input type="text" [(ngModel)]="description"/>
+    </div>
+    <button (click)="addClinic()">Add</button>
+</div>
+<div *ngIf="data">
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let item of data">
+                <td>{{item.name}}</td>
+                <td>{{item.description}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
