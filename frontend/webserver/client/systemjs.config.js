@@ -10,7 +10,7 @@ var isPublic = typeof window != "undefined";
         'app':                        'app', // 'dist',
         '@angular':                   (isPublic)?  '@angular': 'node_modules/@angular',
         'rxjs':                       (isPublic)? 'rxjs' : 'node_modules/rxjs',
-
+        '@angular/material': '@angular/material/bundles/material.umd.js'
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {

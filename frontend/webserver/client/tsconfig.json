@@ -13,6 +13,9 @@
       "es2015",
       "es5",
       "es6"
+    ],
+    "types": [
+      "hammerjs"
     ]
   },
   "exclude": [

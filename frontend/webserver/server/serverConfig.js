@@ -62,12 +62,38 @@ var ServerConfig = (function () {
              };
               res.send(data);*/
         });
+        this.app.post('/service/clinic', function (req, res) {
+        });
         this.app.get('/*', renderIndex);
     };
     ServerConfig.prototype.routes = function () {
         // let route: express.Router = express.Router();
         // IndexRoute.create(route);
         // this.app.use(route);
+    };
+    ServerConfig.prototype.addClinic = function () {
+        return new Promise(function (resolve, reject) {
+            var url = 'http://localhost:8080/clinic/save';
+            console.log(url);
+            //http.request( { url: url},)
+            var option = {};
+            http.request(url, function (resp) {
+                resp.on('data', function (chunk) {
+                    //console.log(chunk.toString());
+                    return resolve(JSON.parse(chunk.toString()));
+                });
+                resp.on('error', function (error) {
+                    console.error(error);
+                    return reject(error);
+                });
+                resp.on('end', function () {
+                    console.log('end call service');
+                });
+            }).on("error", function (err) {
+                console.error("Error: " + err.message);
+                return reject(err);
+            });
+        });
     };
     ServerConfig.prototype.callService = function (id, func) {
         var idInstance = '';

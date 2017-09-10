@@ -10,6 +10,8 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
+var material_module_1 = require("./material.module");
+var animations_1 = require("@angular/platform-browser/animations");
 var app_component_1 = require("./app.component");
 var app_routing_1 = require("./app.routing");
 var heroes_component_1 = require("./components/heroes/heroes.component");
@@ -28,7 +30,9 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 forms_1.FormsModule,
-                app_routing_1.routing
+                app_routing_1.routing,
+                material_module_1.MaterialModule,
+                animations_1.BrowserAnimationsModule
             ],
             declarations: [
                 app_component_1.AppComponent,
